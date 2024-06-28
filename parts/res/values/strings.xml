@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    
+
     <!-- HBM -->
     <string name="oled_hbm_title">High Brightness Mode</string>
     <string name="oled_hbm_summary">Increase screen brightness under sunlight</string>

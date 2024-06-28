@@ -1,22 +1,22 @@
 #!/bin/bash
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
-            "${SIGSCAN}" -p "13 0A 00 94" -P "1F 20 03 D5" -f "${2}"
-            ;;
-        vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
-            "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784e/bin/llvm-strip --strip-debug "${2}"
-            grep -q "libpiex_shim.so" "${2}" || ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
-            ;;
-        vendor/lib/android.hardware.camera.provider@2.4-legacy.so | vendor/lib64/android.hardware.camera.provider@2.4-legacy.so)
-            grep -q "libcamera_provider_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_provider_shim.so" "${2}"
-            ;;
+    vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+        "${SIGSCAN}" -p "13 0A 00 94" -P "1F 20 03 D5" -f "${2}"
+        ;;
+    vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
+        "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784e/bin/llvm-strip --strip-debug "${2}"
+        grep -q "libpiex_shim.so" "${2}" || ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
+        ;;
+    vendor/lib/android.hardware.camera.provider@2.4-legacy.so | vendor/lib64/android.hardware.camera.provider@2.4-legacy.so)
+        grep -q "libcamera_provider_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_provider_shim.so" "${2}"
+        ;;
     esac
 }
 

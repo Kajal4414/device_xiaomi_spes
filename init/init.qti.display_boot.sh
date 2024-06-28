@@ -62,21 +62,21 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-target=`getprop ro.board.platform`
+target=$(getprop ro.board.platform)
 if [ -f /sys/devices/soc0/soc_id ]; then
-    soc_hwid=`cat /sys/devices/soc0/soc_id`
+    soc_hwid=$(cat /sys/devices/soc0/soc_id)
 else
-    soc_hwid=`cat /sys/devices/system/soc/soc0/id`
+    soc_hwid=$(cat /sys/devices/system/soc/soc0/id)
 fi
 
 case "$target" in
-    "bengal")
+"bengal")
     # Set property to differentiate bengal and khaje
     # Soc Id for khaje is 518
     # Soc Id for khaje APQ is 561
     # Soc Id for khaje Gaming is 585 and IOT is 586
     case "$soc_hwid" in
-        518|561|585|586)
+    518 | 561 | 585 | 586)
         # Set property for khaje
         setprop vendor.display.disable_layer_stitch 1
         setprop vendor.display.enable_rounded_corner 0
@@ -86,10 +86,10 @@ case "$target" in
         ;;
     esac
     ;;
-    "lito")
+"lito")
     # Set property to differentiate lito and lagoon
     case "$soc_hwid" in
-        434|459)
+    434 | 459)
         #Set property for lagoon
         setprop vendor.display.enable_hdr10_gpu_target 1
         ;;

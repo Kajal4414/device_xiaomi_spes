@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2023 Paranoid Android
+<!-- Copyright (C) 2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.overlay.spes">
+     package="com.android.wifi.resources.overlay.spes">
 
-    <overlay
-        android:isStatic="true"
-        android:priority="850"
-        android:targetPackage="com.android.wifi.resources"
-        android:targetName="WifiCustomization" />
+     <overlay
+          android:isStatic="true"
+          android:priority="850"
+          android:targetPackage="com.android.wifi.resources"
+          android:targetName="WifiCustomization" />
 </manifest>

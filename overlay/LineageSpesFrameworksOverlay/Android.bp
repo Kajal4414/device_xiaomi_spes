@@ -1,4 +1,4 @@
-// Copyright (C) 2023 Paranoid Android
+// Copyright (C) 2024 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,6 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "AOSPASpesFrameworksOverlay",
+    name: "LineageSpesFrameworksOverlay",
     vendor: true,
 }

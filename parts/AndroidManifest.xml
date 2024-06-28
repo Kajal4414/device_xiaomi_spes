@@ -27,7 +27,7 @@
             </intent-filter>
         </receiver>
 
-    <activity
+        <activity
             android:name=".display.OledFeaturesPreferenceActivity"
             android:exported="true"
             android:label="@string/oled_hbm_title"
@@ -50,11 +50,11 @@
             android:label="@string/oled_hbm_tile_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
-           </service>
+        </service>
 
-    <activity
+        <activity
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
             android:exported="true"
@@ -82,7 +82,7 @@
             android:label="@string/refresh_rate_tile_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
 
@@ -95,6 +95,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
         </activity>
-        
-        </application>
+
+    </application>
 </manifest>
